@@ -1,20 +1,20 @@
 const { Schema, model } = require('mongoose');
 
 const CategoriaSchema = Schema({
-    nombre: {
+    codigoFsl:{
         type: String,
-        required: [true, 'El nombre es obligatorio'],
+        required:[true, 'El codigoFsl es obligatorio'],
+        unique:true
+    },
+    codigoEcostone:{
+        type: String,
+        required: [true, 'El codigoEcostone es obligatorio'],
         unique: true
     },
-    estado: {
-        type: Boolean,
-        default: true,
-        required: true
-    },
-    usuario: {
-        type: Schema.Types.ObjectId,
-        ref: 'Usuario',
-        required: true
+    modelo:{
+        type: String,
+        required: [true, 'El modelo es obligatorio'],
+        unique: true
     }
 });
 
