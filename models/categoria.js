@@ -1,7 +1,7 @@
 const { Schema, model } = require('mongoose');
 
 const CategoriaSchema = Schema({
-    codigoFsl:{
+    ccodigo_fsl:{
         type: String,
         required:[true, 'El codigoFsl es obligatorio'],
         unique:true
