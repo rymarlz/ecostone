@@ -15,7 +15,11 @@ const CategoriaSchema = Schema({
         type: String,
         required: [true, 'El modelo es obligatorio'],
         unique: true
-    }
+    },
+    estado: {
+        type: Boolean,
+        default: true
+    },
 });
 
 
