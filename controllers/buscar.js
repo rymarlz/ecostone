@@ -45,7 +45,10 @@ const buscarCategorias = async( termino = '', res = response ) => {
     }
 
     const regex = new RegExp( termino, 'i' );
-    const categorias = await Categoria.find({ codigo_fls: regex, estado: true });
+    const categorias = await Categoria.find({ 
+        $or: [{ codigo_fsl: regex }, { codigo_ecostone: regex },{modelo:regex}],
+        $and: [{ estado: true }]
+    });
 
     res.json({
         results: categorias
