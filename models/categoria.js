@@ -24,7 +24,7 @@ const CategoriaSchema = Schema({
 
 
 CategoriaSchema.methods.toJSON = function() {
-    const { __v, estado, ...data  } = this.toObject();
+    const { __v,codigo_fsl,codigo_ecostone, ...data  } = this.toObject();
     return data;
 }
 
