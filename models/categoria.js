@@ -6,7 +6,7 @@ const CategoriaSchema = Schema({
         required:[true, 'El codigoFsl es obligatorio'],
         unique:true
     },
-    codigoEcostone:{
+    codigo_ecostone:{
         type: String,
         required: [true, 'El codigoEcostone es obligatorio'],
         unique: true

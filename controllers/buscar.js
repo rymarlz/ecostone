@@ -45,7 +45,7 @@ const buscarCategorias = async( termino = '', res = response ) => {
     }
 
     const regex = new RegExp( termino, 'i' );
-    const categorias = await Categoria.find({ nombre: regex, estado: true });
+    const categorias = await Categoria.find({ codigo_fls: regex, estado: true });
 
     res.json({
         results: categorias
